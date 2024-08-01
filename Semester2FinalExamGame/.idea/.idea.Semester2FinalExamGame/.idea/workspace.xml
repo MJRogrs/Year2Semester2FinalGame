@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6dce7de-4a9e-400a-a30f-da9ea5d2f878" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions.meta" afterDir="false" />
-    </list>
+    <list default="true" id="a6dce7de-4a9e-400a-a30f-da9ea5d2f878" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +13,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2k3b95f7oBXUkI0G4q53A5ad9NF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,7 +26,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "AryaPillayBranch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722515052969</updated>
       <workItem from="1722515056404" duration="3540000" />
+      <workItem from="1722520499836" duration="572000" />
     </task>
     <servers />
   </component>
