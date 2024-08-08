@@ -257,6 +257,9 @@ MonoBehaviour:
   projectileSpeed: 20
   holdPosition: {fileID: 1696724053}
   pickUpRange: 3
+  crouchHeight: 1
+  standingHeight: 2
+  crouchSpeed: 1.5
 --- !u!1 &289164150
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +914,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
