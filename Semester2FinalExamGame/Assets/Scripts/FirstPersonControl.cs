@@ -40,6 +40,13 @@ public class FirstPersonControls : MonoBehaviour
     public float crouchSpeed = 1.5f;    //Make them slower
     private bool isCrouching = false;   //Check to see if they're crouching
 
+    [Header("INSPECT SETTINGS")]
+    [Space(5)]
+    public Transform inspectPosition; // Position where the picked-up object will be held //put the position to where the gun was
+    private GameObject inspectObject; // Reference to the currently held object
+    public float inspectRange = 4f; // Range within which objects can be picked up //Important for the raycast
+    //private bool holdingGun = false; Don't think we need this in the inspect mechanism
+
 
     private void Awake()
     {
@@ -73,7 +80,10 @@ public class FirstPersonControls : MonoBehaviour
         playerInput.Player.PickUp.performed += ctx => PickUpObject(); // Call the PickUpObject method when pick-up input is performed
 
         //Subscribe to the Crouch input event
-        playerInput.Player.Crouch.performed += ctx => ToggleCrouch(); 
+        playerInput.Player.Crouch.performed += ctx => ToggleCrouch();
+
+        //Subscribe to the inspect input event
+        playerInput.Player.Inspect.performed += ctx => InspectObject();
 
     }
 
@@ -222,6 +232,55 @@ public class FirstPersonControls : MonoBehaviour
             characterController.height = crouchHeight;
             isCrouching = true;
         }
+    }
+
+    public void InspectObject()
+    {
+       
+        //check to see if we're holding an object to inspect
+        if (inspectObject != null)
+        {
+            inspectObject.GetComponent<Rigidbody>().isKinematic = true; //We don't want physics when we're inspecting the object, yeah?
+            inspectObject.transform.parent = null;
+        }
+
+        //Perform a raycast from  the camera's position forward
+        Ray rayInspect = new Ray(playerCamera.position, playerCamera.forward);
+        RaycastHit hitInspect;
+
+        //Debugging the raycast to hit in the scene where it's viewable
+        Debug.DrawRay(playerCamera.position, playerCamera.forward * inspectRange, Color.blue, 2f);
+
+        if (Physics.Raycast(rayInspect, out hitInspect, inspectRange))
+        {
+            //Check if the object you're inspecting has the tag "PickUp" since all the pickup objects can also be inspected
+            if (hitInspect.collider.CompareTag("PickUp"))
+            {
+                //Pick up the inspectable object
+                inspectObject = hitInspect.collider.gameObject;
+                inspectObject.GetComponent<Rigidbody>().isKinematic = true; // Disable physics
+
+                // Attach the object to the hold position
+                inspectObject.transform.position = inspectPosition.position;
+                inspectObject.transform.rotation = inspectPosition.rotation;
+                inspectObject.transform.parent = inspectPosition;
+            }
+
+            else if (hitInspect.collider.CompareTag("Gun"))
+            {
+                // Pick up the gun to inspect
+                inspectObject = hitInspect.collider.gameObject;
+                inspectObject.GetComponent<Rigidbody>().isKinematic = true; // Disable physics
+
+                // Attach the gun to the hold position
+                inspectObject.transform.position = inspectPosition.position;
+                inspectObject.transform.rotation = inspectPosition.rotation;
+                inspectObject.transform.parent = inspectPosition;
+
+            }
+        }
+
+
     }
 
 
