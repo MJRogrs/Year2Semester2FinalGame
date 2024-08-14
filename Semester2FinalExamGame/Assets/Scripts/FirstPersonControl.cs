@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class FirstPersonControls : MonoBehaviour
@@ -32,6 +33,7 @@ public class FirstPersonControls : MonoBehaviour
     private GameObject heldObject; // Reference to the currently held object
     public float pickUpRange = 3f; // Range within which objects can be picked up //Important for the raycast
     private bool holdingGun = false;
+    private bool _clickF = false;
 
     [Header("CROUCH SETTINGS")]
     [Space(5)]
@@ -84,6 +86,8 @@ public class FirstPersonControls : MonoBehaviour
 
         //Subscribe to the inspect input event
         playerInput.Player.Inspect.performed += ctx => InspectObject();
+
+        playerInput.Player.RotateObject.performed += ctx => RotateObjectFunction();
 
     }
 
@@ -264,6 +268,7 @@ public class FirstPersonControls : MonoBehaviour
                 inspectObject.transform.position = inspectPosition.position;
                 inspectObject.transform.rotation = inspectPosition.rotation;
                 inspectObject.transform.parent = inspectPosition;
+                _clickF = true;
             }
 
             else if (hitInspect.collider.CompareTag("Gun"))
@@ -276,12 +281,37 @@ public class FirstPersonControls : MonoBehaviour
                 inspectObject.transform.position = inspectPosition.position;
                 inspectObject.transform.rotation = inspectPosition.rotation;
                 inspectObject.transform.parent = inspectPosition;
-
+                _clickF = true;
             }
         }
 
 
     }
+
+    public void RotateObjectFunction ()
+    {
+        bool isRotating = false;
+        float rotationSpeed = 100f;
+        float currentRotationX = 0f;
+        float currentRotationY = 0f;
+        if (_clickF)
+        {
+            //Write code to be able to rotate the object in order to examine it
+            //This is done using the "G" button on the keyboard
+
+            //Get the position of the mouse
+            float mouseX = Input.mousePosition.x;
+            float mouseY = Input.mousePosition.y;
+
+            //Rotate object around the X-axis based on mouse Y input and vice versa
+            currentRotationX -= mouseY * rotationSpeed * Time.deltaTime;
+            currentRotationY += mouseX * rotationSpeed * Time.deltaTime;
+
+            //Apply rotation to the inspected object
+            inspectObject.transform.localRotation = Quaternion.Euler(currentRotationX, currentRotationY, 0);
+        }
+    }
+    
 
 
 }
