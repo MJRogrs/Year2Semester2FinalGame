@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6dce7de-4a9e-400a-a30f-da9ea5d2f878" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions.meta" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +97,11 @@
       <option name="presentableId" value="Default" />
       <updated>1722515052969</updated>
       <workItem from="1722515056404" duration="3540000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1722520499836" duration="572000" />
+      <workItem from="1723672134638" duration="431000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
