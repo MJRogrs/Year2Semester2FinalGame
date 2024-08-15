@@ -566,6 +566,9 @@ MonoBehaviour:
   crouchSpeed: 1.5
   inspectPosition: {fileID: 574458875}
   inspectRange: 3
+  climbing: 2
+  upwardSpeed: 2
+  climable: {fileID: 0}
 --- !u!1 &288530644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7472038325873371746, guid: c297746ca091b0c4e89ea17cac8fdc81,
@@ -1261,6 +1264,54 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3972746577606170256, guid: c297746ca091b0c4e89ea17cac8fdc81, type: 3}
+--- !u!65 &430731546
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430731541}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2.4428532, z: 11.141043}
+  m_Center: {x: -0.000000031334565, y: 0.22142638, z: 4.570521}
+--- !u!54 &430731547
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430731541}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &451483721 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7318126249557456114, guid: c297746ca091b0c4e89ea17cac8fdc81,
@@ -4276,6 +4327,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 430731545}
+    - targetCorrespondingSourceObject: {fileID: 3506664673427720287, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 430731547}
+    - targetCorrespondingSourceObject: {fileID: 3506664673427720287, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 430731546}
     - targetCorrespondingSourceObject: {fileID: 694734497140694546, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       insertIndex: -1
