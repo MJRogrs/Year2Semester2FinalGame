@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirstPersonControls : MonoBehaviour
@@ -49,6 +50,11 @@ public class FirstPersonControls : MonoBehaviour
     public float inspectRange = 4f; // Range within which objects can be picked up //Important for the raycast
     //private bool holdingGun = false; Don't think we need this in the inspect mechanism
 
+    [Header("CLIMBING SETTINGS")] [Space(5)]
+    //cat climbing up furniture or objects
+    public float climbing = 2f;
+    public float upwardSpeed = 2f;
+    public GameObject climable;
 
     private void Awake()
     {
@@ -88,6 +94,10 @@ public class FirstPersonControls : MonoBehaviour
         playerInput.Player.Inspect.performed += ctx => InspectObject();
 
         playerInput.Player.RotateObject.performed += ctx => RotateObjectFunction();
+        
+        //Subscribe to the climbing input system
+        playerInput.Player.Climbing.performed += ctx => Climb(); //whilst climbing
+        playerInput.Player.Climbing.canceled += ctx => Climb(); // when not climbing
 
     }
 
@@ -119,6 +129,9 @@ public class FirstPersonControls : MonoBehaviour
 
         // Move the character controller based on the movement vector and speed
         characterController.Move(move * moveSpeed * Time.deltaTime);
+        
+        //Climbing when moving
+        
     }
 
     public void LookAround()
@@ -321,6 +334,19 @@ public class FirstPersonControls : MonoBehaviour
             //But made the "G" button work to rotate on click
         }
     }
+    public void Climb()
+    {
+       void OnCollisionEnter(Collision col)
+           {
+                    if (col.gameObject.tag == "wall")
+                    {
+                        transform.position += Vector3.up * Time.deltaTime * upwardSpeed;
+                        GetComponent<Rigidbody>().isKinematic = false;
+                    }
+              
+           }
+    }
+
     
 
 
