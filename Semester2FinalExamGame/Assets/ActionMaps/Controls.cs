@@ -98,6 +98,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Climbing"",
+                    ""type"": ""Button"",
+                    ""id"": ""a8421714-07e9-494c-a2fd-78151507f023"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -353,6 +362,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""RotateObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ceadd554-65a5-464e-9840-ab35c03174a6"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Climbing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""57a51fe5-c7a4-4274-8346-4310dce524b9"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Climbing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -392,6 +423,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_Inspect = m_Player.FindAction("Inspect", throwIfNotFound: true);
         m_Player_RotateObject = m_Player.FindAction("RotateObject", throwIfNotFound: true);
+        m_Player_Climbing = m_Player.FindAction("Climbing", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -461,6 +493,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_Inspect;
     private readonly InputAction m_Player_RotateObject;
+    private readonly InputAction m_Player_Climbing;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -473,6 +506,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @Inspect => m_Wrapper.m_Player_Inspect;
         public InputAction @RotateObject => m_Wrapper.m_Player_RotateObject;
+        public InputAction @Climbing => m_Wrapper.m_Player_Climbing;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -506,6 +540,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @RotateObject.started += instance.OnRotateObject;
             @RotateObject.performed += instance.OnRotateObject;
             @RotateObject.canceled += instance.OnRotateObject;
+            @Climbing.started += instance.OnClimbing;
+            @Climbing.performed += instance.OnClimbing;
+            @Climbing.canceled += instance.OnClimbing;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -534,6 +571,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @RotateObject.started -= instance.OnRotateObject;
             @RotateObject.performed -= instance.OnRotateObject;
             @RotateObject.canceled -= instance.OnRotateObject;
+            @Climbing.started -= instance.OnClimbing;
+            @Climbing.performed -= instance.OnClimbing;
+            @Climbing.canceled -= instance.OnClimbing;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -579,5 +619,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnCrouch(InputAction.CallbackContext context);
         void OnInspect(InputAction.CallbackContext context);
         void OnRotateObject(InputAction.CallbackContext context);
+        void OnClimbing(InputAction.CallbackContext context);
     }
 }
