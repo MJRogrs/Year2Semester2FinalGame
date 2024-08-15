@@ -4023,6 +4023,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3506664673427720287, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3669285595986034191, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_TagString
