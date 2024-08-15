@@ -300,6 +300,8 @@ public class FirstPersonControls : MonoBehaviour
             //This is done using the "G" button on the keyboard
 
             //Get the position of the mouse
+            //begin Game Dev Guru (2023, Oct 18). HOW TO INSPECT ANY OBJECT/ITEM IN UNITY. (Create an inspect mechanism) [Video]. YouTube.
+
             float mouseX = Input.mousePosition.x;
             float mouseY = Input.mousePosition.y;
 
@@ -307,8 +309,16 @@ public class FirstPersonControls : MonoBehaviour
             currentRotationX -= mouseY * rotationSpeed * Time.deltaTime;
             currentRotationY += mouseX * rotationSpeed * Time.deltaTime;
 
-            //Apply rotation to the inspected object
+        //Apply rotation to the inspected object
+        //Used localRotation from Royal Skies (2021, Mar 4).Unity 3D Controlling Smooth Rotation - (In 2 Minutes!!) [Video]. YouTube.
+        //Did not add URL because the URL was still blue in the code and would not comment out
+
+
             inspectObject.transform.localRotation = Quaternion.Euler(currentRotationX, currentRotationY, 0);
+            //End Game Dev Guru reference
+            //The above code is not used since we don't have a right mouse button click to examine and rotate an object
+            //Not sure where the code didn't end up working
+            //But made the "G" button work to rotate on click
         }
     }
     
