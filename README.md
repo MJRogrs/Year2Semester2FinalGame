@@ -22,6 +22,8 @@ Pick Up = Button West.
 Crouch = Button East.
 Climb = Top Left Shoulder Button.
 
+@Andy- Climb up the chair. That's the end goal
+
 What is our game about?
 Our game is an open world walking simulator.You play as a cat who has been lost by your owner on one of their journeys through the forest. 
 In being lost, you have bumped your head, thereby causing you to have short term memory loss. 
