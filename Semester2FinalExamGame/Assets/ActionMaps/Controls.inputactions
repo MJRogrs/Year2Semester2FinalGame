@@ -325,20 +325,9 @@
                     "name": "",
                     "id": "dfab51b5-f90b-4eae-9ad6-79b547506f76",
                     "path": "<Keyboard>/g",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "RotateObject",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9bd4e96c-2a23-4993-97b5-bd2b3116b3a2",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
                     "action": "RotateObject",
                     "isComposite": false,
                     "isPartOfComposite": false
