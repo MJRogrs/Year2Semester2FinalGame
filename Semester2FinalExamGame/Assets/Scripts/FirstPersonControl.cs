@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FirstPersonControls : MonoBehaviour
 {
@@ -49,6 +50,25 @@ public class FirstPersonControls : MonoBehaviour
     private GameObject inspectObject; // Reference to the currently held object
     public float inspectRange = 4f; // Range within which objects can be picked up //Important for the raycast
     //private bool holdingGun = false; Don't think we need this in the inspect mechanism
+
+    [Header("CLIMBING SETTINGS")] 
+    [Space(5)]
+    //reference: How To Make a Wall CLimbing System in 4 minutes | Unity 3D - Noblob
+    //the object interaction for climbing
+    public Transform orientation;
+    public Rigidbody rigbod;
+    public LayerMask thisIsClimable;
+    //the player interaction for climbing 
+    public float climbSpeed;
+    //checking to see if the player is currently climbing
+    private bool climbing;
+    //detecting a wall
+    public float detectionLength = 25f;
+    public float sphereCastRadius;
+    public float maxWallLookAngle;
+    private float wallLookAngle;
+    private RaycastHit frontWallHit;
+    private bool wallFront;
     
     private void Awake()
     {
@@ -88,6 +108,9 @@ public class FirstPersonControls : MonoBehaviour
         playerInput.Player.Inspect.performed += ctx => InspectObject();
 
         playerInput.Player.RotateObject.performed += ctx => RotateObjectFunction();
+        
+        //Subscribe to the Climb input event
+        playerInput.Player.Climbing.performed += ctx => Climbing();
 
     }
 
@@ -97,6 +120,7 @@ public class FirstPersonControls : MonoBehaviour
         Move();
         LookAround();
         ApplyGravity();
+        WallCheck();
     }
 
     public void Move()
@@ -323,6 +347,43 @@ public class FirstPersonControls : MonoBehaviour
             //Not sure where the code didn't end up working
             //But made the "G" button work to rotate on click
         }
+    }
+
+    //reference: Unity Scripting Tutorial: Physics.SphereCast
+
+    public void Climbing()
+    {
+        if (wallFront && Input.GetKey(KeyCode.C) && wallLookAngle < maxWallLookAngle)
+        {
+            StartClimbing();
+        }
+        else
+        {
+            EndClimb();
+        }
+           
+    }
+    
+    private void WallCheck()
+    {
+        wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength,
+            thisIsClimable);
+        wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
+    }
+
+    private void StartClimbing()
+    {
+        climbing = true;
+    }
+
+    private void ClimbMove()
+    {
+        rigbod.AddForce(rigbod.velocity.x, climbSpeed, rigbod.velocity.z);
+    }
+
+    private void EndClimb()
+    {
+        climbing = false;
     }
 
     
