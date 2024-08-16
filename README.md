@@ -1,26 +1,28 @@
 Game Controls:
 KEYBOARD:
-Up = W Key/ Up Arrow
-Down = S Key/ Down Arrow
-Left = A Key/ Left Arrow
-Right = D Key/ Right Arrow
-E = Pick Up Item
-F = Inspect Item
-G = Rotate Object (When inspecting)
-C = Climb 
-Spacebar = Jump
-Mouse = Looking Around
-Left Mouse Click = Shooting Acorns
-Control Key = Crouch
+Up = W Key/ Up Arrow.
+Down = S Key/ Down Arrow.
+Left = A Key/ Left Arrow.
+Right = D Key/ Right Arrow.
+E = Pick Up Item.
+F = Inspect Item.
+G = Rotate Object (When inspecting).
+C = Climb.
+Spacebar = Jump.
+Mouse = Looking Around.
+Left Mouse Click = Shooting Acorns.
+Control Key = Crouch.
 
 GAMEPAD:
-Movement = Left Joystick
-Looking Around = Right Joystick
-Jump = Button South
-Shooting Acorns = Right Trigger
-Pick Up = Button West
-Crouch = Button East
-Climb = Top Left Shoulder Button
+Movement = Left Joystick.
+Looking Around = Right Joystick.
+Jump = Button South.
+Shooting Acorns = Right Trigger.
+Pick Up = Button West.
+Crouch = Button East.
+Climb = Top Left Shoulder Button.
+
+@Andy- Climb up the chair. That's the end goal
 
 What is our game about?
 Our game is an open world walking simulator.You play as a cat who has been lost by your owner on one of their journeys through the forest. 
