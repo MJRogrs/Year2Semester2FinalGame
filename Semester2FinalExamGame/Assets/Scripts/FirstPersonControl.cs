@@ -49,13 +49,7 @@ public class FirstPersonControls : MonoBehaviour
     private GameObject inspectObject; // Reference to the currently held object
     public float inspectRange = 4f; // Range within which objects can be picked up //Important for the raycast
     //private bool holdingGun = false; Don't think we need this in the inspect mechanism
-
-    [Header("CLIMBING SETTINGS")] [Space(5)]
-    //cat climbing up furniture or objects
-    public float climbing = 2f;
-    public float upwardSpeed = 2f;
-    public GameObject climable;
-
+    
     private void Awake()
     {
         // Get and store the CharacterController component attached to this GameObject
@@ -94,10 +88,6 @@ public class FirstPersonControls : MonoBehaviour
         playerInput.Player.Inspect.performed += ctx => InspectObject();
 
         playerInput.Player.RotateObject.performed += ctx => RotateObjectFunction();
-        
-        //Subscribe to the climbing input system
-        playerInput.Player.Climbing.performed += ctx => Climb(); //whilst climbing
-        playerInput.Player.Climbing.canceled += ctx => Climb(); // when not climbing
 
     }
 
@@ -333,18 +323,6 @@ public class FirstPersonControls : MonoBehaviour
             //Not sure where the code didn't end up working
             //But made the "G" button work to rotate on click
         }
-    }
-    public void Climb()
-    {
-       void OnCollisionEnter(Collision col)
-           {
-                    if (col.gameObject.tag == "wall")
-                    {
-                        transform.position += Vector3.up * Time.deltaTime * upwardSpeed;
-                        GetComponent<Rigidbody>().isKinematic = false;
-                    }
-              
-           }
     }
 
     

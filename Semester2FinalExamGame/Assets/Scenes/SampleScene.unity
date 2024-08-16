@@ -566,9 +566,6 @@ MonoBehaviour:
   crouchSpeed: 1.5
   inspectPosition: {fileID: 574458875}
   inspectRange: 3
-  climbing: 2
-  upwardSpeed: 2
-  climable: {fileID: 0}
 --- !u!1 &288530644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7472038325873371746, guid: c297746ca091b0c4e89ea17cac8fdc81,
@@ -1308,7 +1305,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3646,17 +3643,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.418
+      value: -4.4179993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.19999933
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.062246
+      value: -0.062246084
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
@@ -3666,17 +3663,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
@@ -3933,6 +3930,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assignment01_FloorPlanModel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 1228895216483625424, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4022,6 +4024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506664673427720287, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 3669285595986034191, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
