@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,7 +17,8 @@ public class FirstPersonControls : MonoBehaviour
     public float lookSpeed; // Sensitivity of the camera movement
     public float gravity = -9.81f; // Gravity value
     public float jumpHeight = 1.0f; // Height of the jump
-    public Transform playerCamera; // Reference to the player's camera
+    public Transform playerCamera;
+    // Reference to the player's camera
                                    // Private variables to store input values and the character controller
     private Vector2 moveInput; // Stores the movement input from the player
     private Vector2 lookInput; // Stores the look input from the player
@@ -53,22 +56,17 @@ public class FirstPersonControls : MonoBehaviour
 
     [Header("CLIMBING SETTINGS")] 
     [Space(5)]
-    //reference: How To Make a Wall CLimbing System in 4 minutes | Unity 3D - Noblob
-    //the object interaction for climbing
-    public Transform orientation;
-    public Rigidbody rigbod;
-    public LayerMask thisIsClimable;
-    //the player interaction for climbing 
-    public float climbSpeed;
-    //checking to see if the player is currently climbing
-    private bool climbing;
-    //detecting a wall
-    public float detectionLength = 25f;
-    public float sphereCastRadius;
-    public float maxWallLookAngle;
-    private float wallLookAngle;
-    private RaycastHit frontWallHit;
-    private bool wallFront;
+    public float open = 100f;
+    public float range = 1f;
+    public bool touchingClimable = false;
+    public float climbSpeed = 5f;
+    public Camera mainCamera;
+
+    [Header("BAT SETTINGS")] 
+    [Space(5)] 
+    public GameObject battable1;
+    
+    
     
     private void Awake()
     {
@@ -110,7 +108,10 @@ public class FirstPersonControls : MonoBehaviour
         playerInput.Player.RotateObject.performed += ctx => RotateObjectFunction();
         
         //Subscribe to the Climb input event
-        playerInput.Player.Climbing.performed += ctx => Climbing();
+        playerInput.Player.Climbing.performed += ctx => Climbing(); // not currently working wip
+        
+        //Subscribe to the Bat input event
+        playerInput.Player.Bat.performed += ctx => Bat(); // calling the destroy for ball cat toy.
 
     }
 
@@ -119,8 +120,30 @@ public class FirstPersonControls : MonoBehaviour
         // Call Move and LookAround methods every frame to handle player movement and camera rotation
         Move();
         LookAround();
+        
+        //climbing attempt
+        Climbing();
+        if (Input.GetKey("c") && touchingClimable == true)
+        {
+            if (touchingClimable)
+            {
+                transform.position += Vector3.up * Time.deltaTime * climbSpeed;
+                GetComponent<Rigidbody>().isKinematic = true;
+                touchingClimable = false;
+                GetComponent<Rigidbody>().isKinematic = false;
+            
+            } 
+            if (Input.GetKeyUp("c"))
+            {
+                GetComponent<Rigidbody>().isKinematic = false;
+                touchingClimable = false;
+            }
+        }  
+        
         ApplyGravity();
-        WallCheck();
+        
+        
+
     }
 
     public void Move()
@@ -349,44 +372,33 @@ public class FirstPersonControls : MonoBehaviour
         }
     }
 
-    //reference: Unity Scripting Tutorial: Physics.SphereCast
-
+    
+    //heeyyyy climbing isn't working rn, hence the new bat system. Please, if you are looking
+    //through our code, please tell us what we did wrong here :,)
     public void Climbing()
     {
-        if (wallFront && Input.GetKey(KeyCode.C) && wallLookAngle < maxWallLookAngle)
+        RaycastHit hit;
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, range))
         {
-            StartClimbing();
+            Debug.Log(hit.transform.name);
+            print("hit");
+            Climable target = hit.transform.GetComponent<Climable>();
+            if (target != null)
+            {
+                touchingClimable = true;
+            }
         }
-        else
-        {
-            EndClimb();
-        }
-           
+      
     }
-    
-    private void WallCheck()
+
+    //destroying the cat ball with a bat.
+    public void Bat()
     {
-        wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength,
-            thisIsClimable);
-        wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
+        OnMouseDown();
     }
 
-    private void StartClimbing()
+    private void OnMouseDown()
     {
-        climbing = true;
+        Destroy(battable1, 3f);
     }
-
-    private void ClimbMove()
-    {
-        rigbod.AddForce(rigbod.velocity.x, climbSpeed, rigbod.velocity.z);
-    }
-
-    private void EndClimb()
-    {
-        climbing = false;
-    }
-
-    
-
-
 }

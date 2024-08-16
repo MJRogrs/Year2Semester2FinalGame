@@ -80,7 +80,16 @@
                 {
                     "name": "Climbing",
                     "type": "Button",
-                    "id": "a8421714-07e9-494c-a2fd-78151507f023",
+                    "id": "b7030ff4-a3b5-4f60-b921-16335c0a4427",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Bat",
+                    "type": "Button",
+                    "id": "798713bc-e779-41f3-8b87-10dcc01cf7e6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -343,8 +352,19 @@
                 },
                 {
                     "name": "",
-                    "id": "ceadd554-65a5-464e-9840-ab35c03174a6",
-                    "path": "<Gamepad>/leftStick/up",
+                    "id": "2e0284b3-c0e1-4f81-9011-d0fd76a5779e",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Climbing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4f98b6f-20d9-425b-8fb3-f6e902439395",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -354,12 +374,23 @@
                 },
                 {
                     "name": "",
-                    "id": "57a51fe5-c7a4-4274-8346-4310dce524b9",
-                    "path": "<Keyboard>/c",
+                    "id": "b601b37f-f0c7-4db2-913e-3ed0e4b6165e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Climbing",
+                    "action": "Bat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "243c8724-ac9d-473a-8d7b-eea625c8abc1",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Bat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
