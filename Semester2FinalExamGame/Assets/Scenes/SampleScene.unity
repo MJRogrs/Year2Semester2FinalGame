@@ -3838,6 +3838,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PickUp
       objectReference: {fileID: 0}
+    - target: {fileID: -8068073526183931155, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: -7472038325873371746, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_TagString
@@ -4018,6 +4023,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3584448
       objectReference: {fileID: 0}
+    - target: {fileID: -305091885687274788, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a9925607f3a94b4997a6805b67a6099, type: 2}
     - target: {fileID: -248084186682338888, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_LocalScale.x

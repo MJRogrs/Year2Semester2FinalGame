@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - wall
   - Switch
+  - Door
   layers:
   - Default
   - TransparentFX
