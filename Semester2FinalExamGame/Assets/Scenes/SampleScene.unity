@@ -573,7 +573,8 @@ MonoBehaviour:
   climbSpeed: 5
   mainCamera: {fileID: 330585545}
   battable1: {fileID: 414954482}
-  battable2: {fileID: 2081611045}
+  switchMaterial: {fileID: 0}
+  objectsToChangeColor: []
 --- !u!54 &283447587
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4060,7 +4061,7 @@ PrefabInstance:
     - target: {fileID: 744608725179766007, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_TagString
-      value: PickUp
+      value: Switch
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
@@ -4147,6 +4148,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 10.22
       objectReference: {fileID: 0}
+    - target: {fileID: 2838177187848449245, guid: c297746ca091b0c4e89ea17cac8fdc81,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b8a11f39af6eb3d4b9f0bbb9cf92a8f6, type: 2}
     - target: {fileID: 2954797214575703782, guid: c297746ca091b0c4e89ea17cac8fdc81,
         type: 3}
       propertyPath: m_TagString

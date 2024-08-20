@@ -7,6 +7,7 @@ TagManager:
   - Gun
   - PickUp
   - wall
+  - Switch
   layers:
   - Default
   - TransparentFX
