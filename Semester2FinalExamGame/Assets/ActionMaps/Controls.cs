@@ -91,7 +91,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RotateObject"",
+                    ""name"": ""RotateObjectY"",
                     ""type"": ""Button"",
                     ""id"": ""01f5d79a-b13c-4b80-bf72-5effcd48e13a"",
                     ""expectedControlType"": ""Button"",
@@ -103,6 +103,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""Climbing"",
                     ""type"": ""Button"",
                     ""id"": ""a8421714-07e9-494c-a2fd-78151507f023"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RotateObjectX"",
+                    ""type"": ""Button"",
+                    ""id"": ""ff4450c7-2a5d-4fc8-b846-0eab296f9b4d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -359,7 +368,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""RotateObject"",
+                    ""action"": ""RotateObjectY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -382,6 +391,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Climbing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4115e2a-d8b3-4d70-bc55-0e61d130bdea"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""RotateObjectX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -422,8 +442,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_PickUp = m_Player.FindAction("PickUp", throwIfNotFound: true);
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_Inspect = m_Player.FindAction("Inspect", throwIfNotFound: true);
-        m_Player_RotateObject = m_Player.FindAction("RotateObject", throwIfNotFound: true);
+        m_Player_RotateObjectY = m_Player.FindAction("RotateObjectY", throwIfNotFound: true);
         m_Player_Climbing = m_Player.FindAction("Climbing", throwIfNotFound: true);
+        m_Player_RotateObjectX = m_Player.FindAction("RotateObjectX", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -492,8 +513,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_PickUp;
     private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_Inspect;
-    private readonly InputAction m_Player_RotateObject;
+    private readonly InputAction m_Player_RotateObjectY;
     private readonly InputAction m_Player_Climbing;
+    private readonly InputAction m_Player_RotateObjectX;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -505,8 +527,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @PickUp => m_Wrapper.m_Player_PickUp;
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @Inspect => m_Wrapper.m_Player_Inspect;
-        public InputAction @RotateObject => m_Wrapper.m_Player_RotateObject;
+        public InputAction @RotateObjectY => m_Wrapper.m_Player_RotateObjectY;
         public InputAction @Climbing => m_Wrapper.m_Player_Climbing;
+        public InputAction @RotateObjectX => m_Wrapper.m_Player_RotateObjectX;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -537,12 +560,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Inspect.started += instance.OnInspect;
             @Inspect.performed += instance.OnInspect;
             @Inspect.canceled += instance.OnInspect;
-            @RotateObject.started += instance.OnRotateObject;
-            @RotateObject.performed += instance.OnRotateObject;
-            @RotateObject.canceled += instance.OnRotateObject;
+            @RotateObjectY.started += instance.OnRotateObjectY;
+            @RotateObjectY.performed += instance.OnRotateObjectY;
+            @RotateObjectY.canceled += instance.OnRotateObjectY;
             @Climbing.started += instance.OnClimbing;
             @Climbing.performed += instance.OnClimbing;
             @Climbing.canceled += instance.OnClimbing;
+            @RotateObjectX.started += instance.OnRotateObjectX;
+            @RotateObjectX.performed += instance.OnRotateObjectX;
+            @RotateObjectX.canceled += instance.OnRotateObjectX;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -568,12 +594,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Inspect.started -= instance.OnInspect;
             @Inspect.performed -= instance.OnInspect;
             @Inspect.canceled -= instance.OnInspect;
-            @RotateObject.started -= instance.OnRotateObject;
-            @RotateObject.performed -= instance.OnRotateObject;
-            @RotateObject.canceled -= instance.OnRotateObject;
+            @RotateObjectY.started -= instance.OnRotateObjectY;
+            @RotateObjectY.performed -= instance.OnRotateObjectY;
+            @RotateObjectY.canceled -= instance.OnRotateObjectY;
             @Climbing.started -= instance.OnClimbing;
             @Climbing.performed -= instance.OnClimbing;
             @Climbing.canceled -= instance.OnClimbing;
+            @RotateObjectX.started -= instance.OnRotateObjectX;
+            @RotateObjectX.performed -= instance.OnRotateObjectX;
+            @RotateObjectX.canceled -= instance.OnRotateObjectX;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -618,7 +647,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnPickUp(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnInspect(InputAction.CallbackContext context);
-        void OnRotateObject(InputAction.CallbackContext context);
+        void OnRotateObjectY(InputAction.CallbackContext context);
         void OnClimbing(InputAction.CallbackContext context);
+        void OnRotateObjectX(InputAction.CallbackContext context);
     }
 }

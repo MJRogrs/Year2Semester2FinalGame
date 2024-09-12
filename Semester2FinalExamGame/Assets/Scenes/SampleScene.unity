@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 283447581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.4, y: 1, z: -17.8}
+  m_LocalPosition: {x: 13.4, y: 1.02, z: -17.8}
   m_LocalScale: {x: 0.72423, y: 0.72423, z: 0.72423}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -566,6 +566,9 @@ MonoBehaviour:
   crouchSpeed: 1.5
   inspectPosition: {fileID: 574458875}
   inspectRange: 3
+  climbing: 2
+  upwardSpeed: 2
+  climable: {fileID: 0}
 --- !u!1 &288530644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7472038325873371746, guid: c297746ca091b0c4e89ea17cac8fdc81,
@@ -1476,7 +1479,7 @@ Transform:
   m_GameObject: {fileID: 574458874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38540548, y: -0.31712106, z: 1.703828}
+  m_LocalPosition: {x: -0.38540548, y: -0.31712106, z: 3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

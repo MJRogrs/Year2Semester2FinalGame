@@ -69,7 +69,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "RotateObject",
+                    "name": "RotateObjectY",
                     "type": "Button",
                     "id": "01f5d79a-b13c-4b80-bf72-5effcd48e13a",
                     "expectedControlType": "Button",
@@ -81,6 +81,15 @@
                     "name": "Climbing",
                     "type": "Button",
                     "id": "a8421714-07e9-494c-a2fd-78151507f023",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateObjectX",
+                    "type": "Button",
+                    "id": "ff4450c7-2a5d-4fc8-b846-0eab296f9b4d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -337,7 +346,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "RotateObject",
+                    "action": "RotateObjectY",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -360,6 +369,17 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Climbing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4115e2a-d8b3-4d70-bc55-0e61d130bdea",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "RotateObjectX",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
