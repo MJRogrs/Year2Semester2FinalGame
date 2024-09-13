@@ -10,10 +10,10 @@ public class FirstPersonControls : MonoBehaviour
     [Header("MOVEMENT SETTINGS")]
     [Space(5)]
     // Public variables to set movement and look speed, and the player camera
-    public float moveSpeed; // Speed at which the player moves
-    public float lookSpeed; // Sensitivity of the camera movement
+    public float moveSpeed = 5; // Speed at which the player moves
+    public float lookSpeed = 0.25f; // Sensitivity of the camera movement
     public float gravity = -9.81f; // Gravity value
-    public float jumpHeight = 1.0f; // Height of the jump
+    public float jumpHeight = 2.0f; // Height of the jump
     public Transform playerCamera; // Reference to the player's camera
                                    // Private variables to store input values and the character controller
     private Vector2 moveInput; // Stores the movement input from the player
