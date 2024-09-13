@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Gun
   - PickUp
+  - wall
+  - Switch
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - wall
+  - thisIsClimable
   - 
   - 
   - 

@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6dce7de-4a9e-400a-a30f-da9ea5d2f878" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Semester2FinalExamGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Semester2FinalExamGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ActionMaps/Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActionMaps/Controls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActionMaps/Controls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPersonControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPersonControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +16,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/climable.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -94,6 +101,9 @@
       <updated>1722515052969</updated>
       <workItem from="1722515056404" duration="3540000" />
       <workItem from="1722520499836" duration="572000" />
+      <workItem from="1723752062569" duration="97000" />
+      <workItem from="1723753425375" duration="1157000" />
+      <workItem from="1723790835763" duration="4325000" />
     </task>
     <servers />
   </component>
