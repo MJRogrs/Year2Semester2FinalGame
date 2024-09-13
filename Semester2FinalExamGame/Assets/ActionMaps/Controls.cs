@@ -102,7 +102,25 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Climbing"",
                     ""type"": ""Button"",
-                    ""id"": ""a8421714-07e9-494c-a2fd-78151507f023"",
+                    ""id"": ""b7030ff4-a3b5-4f60-b921-16335c0a4427"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Bat"",
+                    ""type"": ""Button"",
+                    ""id"": ""798713bc-e779-41f3-8b87-10dcc01cf7e6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""7c6286f9-909a-415a-af86-f58f4f5c5fc6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -363,6 +381,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""92441f5a-4644-46ac-af53-f80285172836"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Inspect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""dfab51b5-f90b-4eae-9ad6-79b547506f76"",
                     ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
@@ -374,8 +403,30 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ceadd554-65a5-464e-9840-ab35c03174a6"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""id"": ""8d29a524-9e23-419c-8d4c-de5f7d4a56da"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""RotateObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e0284b3-c0e1-4f81-9011-d0fd76a5779e"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Climbing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4f98b6f-20d9-425b-8fb3-f6e902439395"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -385,12 +436,45 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""57a51fe5-c7a4-4274-8346-4310dce524b9"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""b601b37f-f0c7-4db2-913e-3ed0e4b6165e"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Climbing"",
+                    ""action"": ""Bat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""243c8724-ac9d-473a-8d7b-eea625c8abc1"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Bat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8727d25-334a-4c32-85cd-a20bef74e6a7"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c442c27-3673-4bcf-95e8-8da383ae54b4"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -444,6 +528,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Inspect = m_Player.FindAction("Inspect", throwIfNotFound: true);
         m_Player_RotateObjectY = m_Player.FindAction("RotateObjectY", throwIfNotFound: true);
         m_Player_Climbing = m_Player.FindAction("Climbing", throwIfNotFound: true);
+        m_Player_Bat = m_Player.FindAction("Bat", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_RotateObjectX = m_Player.FindAction("RotateObjectX", throwIfNotFound: true);
     }
 
@@ -515,6 +601,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Inspect;
     private readonly InputAction m_Player_RotateObjectY;
     private readonly InputAction m_Player_Climbing;
+    private readonly InputAction m_Player_Bat;
+    private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_RotateObjectX;
     public struct PlayerActions
     {
@@ -529,6 +617,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Inspect => m_Wrapper.m_Player_Inspect;
         public InputAction @RotateObjectY => m_Wrapper.m_Player_RotateObjectY;
         public InputAction @Climbing => m_Wrapper.m_Player_Climbing;
+        public InputAction @Bat => m_Wrapper.m_Player_Bat;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @RotateObjectX => m_Wrapper.m_Player_RotateObjectX;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -566,6 +656,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Climbing.started += instance.OnClimbing;
             @Climbing.performed += instance.OnClimbing;
             @Climbing.canceled += instance.OnClimbing;
+            @Bat.started += instance.OnBat;
+            @Bat.performed += instance.OnBat;
+            @Bat.canceled += instance.OnBat;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
             @RotateObjectX.started += instance.OnRotateObjectX;
             @RotateObjectX.performed += instance.OnRotateObjectX;
             @RotateObjectX.canceled += instance.OnRotateObjectX;
@@ -600,6 +696,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Climbing.started -= instance.OnClimbing;
             @Climbing.performed -= instance.OnClimbing;
             @Climbing.canceled -= instance.OnClimbing;
+            @Bat.started -= instance.OnBat;
+            @Bat.performed -= instance.OnBat;
+            @Bat.canceled -= instance.OnBat;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
             @RotateObjectX.started -= instance.OnRotateObjectX;
             @RotateObjectX.performed -= instance.OnRotateObjectX;
             @RotateObjectX.canceled -= instance.OnRotateObjectX;
@@ -649,6 +751,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnInspect(InputAction.CallbackContext context);
         void OnRotateObjectY(InputAction.CallbackContext context);
         void OnClimbing(InputAction.CallbackContext context);
+        void OnBat(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         void OnRotateObjectX(InputAction.CallbackContext context);
     }
 }
