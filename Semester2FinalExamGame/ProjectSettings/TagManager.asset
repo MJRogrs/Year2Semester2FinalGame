@@ -9,6 +9,7 @@ TagManager:
   - wall
   - Switch
   - Door
+  - climb
   layers:
   - Default
   - TransparentFX

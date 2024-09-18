@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -58,6 +59,8 @@ public class FirstPersonControls : MonoBehaviour
     public float upwardSpeed = 2f;
     public GameObject climable;
 
+    bool _boolclimbing = false;
+
     private void Awake()
     {
         // Get and store the CharacterController component attached to this GameObject
@@ -101,7 +104,7 @@ public class FirstPersonControls : MonoBehaviour
 
         //Subscribe to the climbing input system
         playerInput.Player.Climbing.performed += ctx => Climb(); //whilst climbing
-        playerInput.Player.Climbing.canceled += ctx => Climb(); // when not climbing
+        playerInput.Player.Climbing.canceled += ctx => ClimbExit(); // when not climbing
 
     }
 
@@ -131,11 +134,17 @@ public class FirstPersonControls : MonoBehaviour
             currentSpeed = moveSpeed;
         }
 
-        // Move the character controller based on the movement vector and speed
-        characterController.Move(move * moveSpeed * Time.deltaTime);
         
-        //Climbing when moving
-        
+        if (_boolclimbing)
+        {
+            characterController.Move(new Vector3(0, move.y * currentSpeed * Time.deltaTime, 0));
+        }
+        else
+        {
+            // Move the character controller based on the movement vector and speed
+            characterController.Move(move * moveSpeed * Time.deltaTime);
+        }       
+        //Climbing when moving       
     }
 
     public void LookAround()
@@ -149,14 +158,27 @@ public class FirstPersonControls : MonoBehaviour
             // Horizontal rotation: Rotate the player object around the y-axis
             transform.Rotate(0, LookX, 0);
 
-            // Vertical rotation: Adjust the vertical look rotation and clamp it to prevent flipping
-            verticalLookRotation -= LookY;
-            verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
+        /*  // Vertical rotation: Adjust the vertical look rotation and clamp it to prevent flipping
+          verticalLookRotation -= LookY;
+          verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
 
-            // Apply the clamped vertical rotation to the player camera
+          // Apply the clamped vertical rotation to the player camera
+          playerCamera.localEulerAngles = new Vector3(verticalLookRotation, 0, 0);
+      //}*/
+
+        verticalLookRotation -= LookY;
+        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
+
+        if (_boolclimbing == true)
+        {
+            playerCamera.localEulerAngles = new Vector3(0, 80, 0);
+        }
+        else
+        {
+            //Apply the clamped vertical rotation to the camera
             playerCamera.localEulerAngles = new Vector3(verticalLookRotation, 0, 0);
-        //}
-        
+        }
+       
 
         
     }
@@ -174,11 +196,23 @@ public class FirstPersonControls : MonoBehaviour
 
     public void Jump()
     {
+        //doublr jump
+        int _jumpCount = 0;
+        int maxJumps = 2;
+
         if (characterController.isGrounded)
         {
+            _jumpCount = 0;
             // Calculate the jump velocity
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            
         }
+
+        if (_jumpCount < maxJumps)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            _jumpCount++;
+        }
+
     }
 
     public void Shoot()
@@ -344,18 +378,37 @@ public class FirstPersonControls : MonoBehaviour
 
     public void Climb()
     {
-       void OnCollisionEnter(Collision col)
-           {
-                    if (col.gameObject.tag == "wall")
-                    {
-                        transform.position += Vector3.up * Time.deltaTime * upwardSpeed;
-                        GetComponent<Rigidbody>().isKinematic = false;
-                    }
-              
-           }
+        _boolclimbing = true;
+        Debug.Log("your C is working");
+    }
+    void OnCollisionEnter(Collision climb)
+    {
+        Debug.Log("collided with climbable object");
+        if (climb.gameObject.tag == "climb")
+        {
+
+            Climb();
+        }
     }
 
+    public void ClimbExit()
+    {
+        void OnCollisionExit(Collision climbExit)
+        {
+            Debug.Log("exiting climbable object");
+
+            if (climbExit.gameObject.CompareTag("climb"))
+            {
+                _boolclimbing = false;
+            }
+        }
+    }
     
+
+
+
+
+
 
 
 }
