@@ -1,0 +1,499 @@
+fileFormatVersion: 2
+guid: bffbb2b236aca844cb3567793a0fc5a9
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathroomCabinetMaterial
+    second: {fileID: 2100000, guid: d6b29837f2c53384e8b4d07ee85572b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlanketMaterial
+    second: {fileID: 2100000, guid: 2ecb4ba27d4997844820cf14fa5244a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book10Material
+    second: {fileID: 2100000, guid: 1e9d1077ec3f4c3408fcf3c1dd67bda5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book10Material.001
+    second: {fileID: 2100000, guid: 72af6689d63b414408e341cb580e32e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book10Material.002
+    second: {fileID: 2100000, guid: 2eb640426be35474fa067b6eff8af796, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book1Material
+    second: {fileID: 2100000, guid: dd503610d55e0fc418de052466d967d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book1Material.001
+    second: {fileID: 2100000, guid: 0a24c09c401a1124390a1361118852bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book1Material.002
+    second: {fileID: 2100000, guid: 7e9c9ca9c62d2314fb4807155b3b3e5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book2Material
+    second: {fileID: 2100000, guid: 08ba6543ea0968d41916c31cf9397f4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book2Material.001
+    second: {fileID: 2100000, guid: d3370542226c5764e8a320e238dc4b90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book2Material.002
+    second: {fileID: 2100000, guid: 6b050edfa04c8ff418f2b881d5585e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book3Material
+    second: {fileID: 2100000, guid: 88012df0a8455544aab82f18971c5a58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book3Material.001
+    second: {fileID: 2100000, guid: 664ee71de17cf0f4980ed8f777efa352, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book3Material.002
+    second: {fileID: 2100000, guid: ca4b13c29aeb83747975b2980df482dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book4Material
+    second: {fileID: 2100000, guid: 5e4f99b089300ef4fbde7785adfe6570, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book4Material.001
+    second: {fileID: 2100000, guid: 6c2795b9527dfbc4eb689fc55ee98f7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book4Material.002
+    second: {fileID: 2100000, guid: 8a08e3544e1e96f41a560b27d96542ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book5Material
+    second: {fileID: 2100000, guid: 8bb8a1bc97b270e4289e705869e346d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book5Material.001
+    second: {fileID: 2100000, guid: 4fae461d36d9ab54a909daa098f21621, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book5Material.002
+    second: {fileID: 2100000, guid: de66d9c2416c2c944b8ae64aab0ebe3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book6Material
+    second: {fileID: 2100000, guid: 0e5daab24285a384fa65d8749678ea24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book6Material.001
+    second: {fileID: 2100000, guid: 36b3a69ac7b46cb49bdd316981c69385, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book6Material.002
+    second: {fileID: 2100000, guid: 674e3554a7a555844a8f33a646a4261f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book7Material
+    second: {fileID: 2100000, guid: d4e4d40610833d94188010f12a3ab361, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book7Material.001
+    second: {fileID: 2100000, guid: 3bb29e7f3e6b6a343b9897a890a0cb9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book7Material.002
+    second: {fileID: 2100000, guid: 4f8fc180b1f24944c9a04bcde3c9e595, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book8Material
+    second: {fileID: 2100000, guid: 4afc48105e40ab04cb3f3c845f0ff061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book8Material.001
+    second: {fileID: 2100000, guid: 45cf8e4ac79022c4188908c438dcc821, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book8Material.002
+    second: {fileID: 2100000, guid: 5b9d6a7e5b7d20a438c735b9873f5f22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial
+    second: {fileID: 2100000, guid: 948c7c5b135c31e46a482f3dd199980c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.001
+    second: {fileID: 2100000, guid: 10dbc36d8bc97b443ba29dc1bb6ab13b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.002
+    second: {fileID: 2100000, guid: 71dbf4330c32ad5419c7ccddfcf09e48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.003
+    second: {fileID: 2100000, guid: d532a898d3e1f2d49b21b0fdc7370c7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.004
+    second: {fileID: 2100000, guid: 14f8a7a3c79130a43be3dadb369e8f72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.005
+    second: {fileID: 2100000, guid: 01d4f9b3a6667854aa09e74e96c146b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.006
+    second: {fileID: 2100000, guid: ca02d57abf25b884d862044230b8e2c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.007
+    second: {fileID: 2100000, guid: ef2afb29bc13b7e4891f93c1b3cffc39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BookShelfMaterial.008
+    second: {fileID: 2100000, guid: 3e4dae01f739441409eae626a7a852b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBallMaterial
+    second: {fileID: 2100000, guid: a6201dab57c67f749883eead4d2c81c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBallMaterial.001
+    second: {fileID: 2100000, guid: abd6b7d331f66de458110fd4772a5e51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBallMaterial.002
+    second: {fileID: 2100000, guid: 197c578617a74af4fb3e886b07395ebc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBallMaterial.003
+    second: {fileID: 2100000, guid: 8b8700659b7df1b4394a796d2b85841a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBallMaterial.004
+    second: {fileID: 2100000, guid: f324cf9efab4bb344847df6dbc069621, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBallMaterial.005
+    second: {fileID: 2100000, guid: 3290a6de8c8902946824d77c3c91a8ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatBedMaterial
+    second: {fileID: 2100000, guid: 9016d4060752fc74fa4d23575b603d5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatFoodBowlMaterial
+    second: {fileID: 2100000, guid: 3e3ae2cae13574e44aed503018c88fdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CatWaterBowlMaterial
+    second: {fileID: 2100000, guid: 8400336f32153944582721b0321c67dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChairMaterial
+    second: {fileID: 2100000, guid: 7f4e35c6f422e5048b03e82ce4f57a2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DiningRoomTableMaterial
+    second: {fileID: 2100000, guid: f653614956bf1624f9c4f352399d0820, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FishCatToyMaterial
+    second: {fileID: 2100000, guid: f5f76141086494b489e3700495ebec5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FishCatToyMaterial.001
+    second: {fileID: 2100000, guid: 45fac0496112afa48aa9e72a46be1ea4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FishCatToyMaterial.002
+    second: {fileID: 2100000, guid: 9fd799e7a792389468067fe9a03b7032, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FishCatToyMaterial.003
+    second: {fileID: 2100000, guid: a5d8a5462d765b748b7c175e3439eb51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FishCatToyMaterial.004
+    second: {fileID: 2100000, guid: 9fcb5c5b73764c848bfef8588539cbd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FishCatToyMaterial.005
+    second: {fileID: 2100000, guid: e881d9a81ad7fc84b89b2eac2934c6fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House, Floors, Shower Material
+    second: {fileID: 2100000, guid: edd330ce255e2614d87456c76b312d49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KitchenContainerMaterial
+    second: {fileID: 2100000, guid: c305346d805806a46ab674030a3687d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KitchenTableMaterial
+    second: {fileID: 2100000, guid: 821d8df1893f9da4eb35469bbf85f984, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LivingRoomChairMaterial
+    second: {fileID: 2100000, guid: f50db69af21abf142bfebf4f5d7e308d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d8124d330f6e8db479694f17cc2d9ea6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 0843d2981d3816541917bd4b3a92d6cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintCupMaterial
+    second: {fileID: 2100000, guid: 7261dc1d2a725ae4a9bf67fc96f7c382, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintPlateMaterial
+    second: {fileID: 2100000, guid: 1facdcb79cda98f4baf617ca17851c56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintbrushMaterial
+    second: {fileID: 2100000, guid: 1ec1de972544636478ab80c639242ef0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PillowMaterial.001
+    second: {fileID: 2100000, guid: 2a892c90d9298644ea98a2e2dc0d3945, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RugMaterial
+    second: {fileID: 2100000, guid: 1d0b72d5cdb620841980818ed6239376, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RugMaterial.001
+    second: {fileID: 2100000, guid: a0f3237f6f043e04791bd74dc69a9d7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RugMaterial.002
+    second: {fileID: 2100000, guid: c251ffdc43c62c3418b5f729c3090fb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RugMaterial.003
+    second: {fileID: 2100000, guid: cafa7bb621fe3f1458a265a87f017812, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RugMaterial.004
+    second: {fileID: 2100000, guid: 7b6c1efb0a93efc42b1067c895bc19c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShowerMaterial
+    second: {fileID: 2100000, guid: 2086802b7d9f5454bb544a2c88fa8914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SinkMaterial
+    second: {fileID: 2100000, guid: acac4ecaf688fd1489bd6243283f2668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StrawHatMaterial
+    second: {fileID: 2100000, guid: 7a4a6e3b8feddc64fae358463a9d55b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToiletMaterial
+    second: {fileID: 2100000, guid: d80a73e638beefe4caa251e0a2822268, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToiletPaperMaterial
+    second: {fileID: 2100000, guid: 84de615817af0a64ebf2ceca5ea43624, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToiletPaperMaterial.001
+    second: {fileID: 2100000, guid: 3a1dee0b29bc04b46b6385120d3ba03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToiletPaperMaterial.002
+    second: {fileID: 2100000, guid: 27d26cfb94c43764ba2812f74f2eab26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToiletPaperMaterial.003
+    second: {fileID: 2100000, guid: 0a59ffa20e1a5334b84c0fd101a64353, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
